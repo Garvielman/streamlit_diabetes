@@ -77,7 +77,7 @@ if st.button('Test Prediction Diabetes'):
     Irritability = int(Irritability)
     delayedhealing = int(delayedhealing)
     partialparesis = int(partialparesis)
-    muscle_stiffness = int(muscle_stiffness)
+    muscle_stiffness = int(musclestiffness)
     Alopecia = int(Alopecia)
     Obesity = int(Obesity)
 
