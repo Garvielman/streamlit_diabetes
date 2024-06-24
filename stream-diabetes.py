@@ -1,20 +1,20 @@
 import pickle
 import streamlit as st
 
-# Load the diabetes model
+# Memuat model diabetes
 diabetes_model = pickle.load(open('diabetes_model.sav', 'rb'))
 
-# Title of the app
+# Judul aplikasi
 st.title('Data Mining Prediction Diabetes')
 
-# Creating columns for input fields
+# Membuat kolom untuk input field
 col1, col2 = st.columns(2)
 
 with col1:
     Age = st.number_input('Input Age', min_value=0, max_value=120, step=1)
 
 with col2:
-    Gender = st.selectbox('Input Gender', [0, 1])  # Assuming 0 for female and 1 for male
+    Gender = st.selectbox('Input Gender', [0, 1])  # Mengasumsikan 0 untuk perempuan dan 1 untuk laki-laki
 
 with col1:
     Polyuria = st.number_input('Input Polyuria', min_value=0, max_value=1, step=1)
@@ -58,12 +58,12 @@ with col1:
 with col2:
     Obesity = st.number_input('Input Obesity', min_value=0, max_value=1, step=1)
 
-# Placeholder for the diagnosis result
+# Placeholder untuk hasil diagnosis
 diab_diagnosis = ''
 
-# When the button is clicked, make the prediction and display the result
+# Ketika tombol diklik, buat prediksi dan tampilkan hasil
 if st.button('Test Prediction Diabetes'):
-    # Convert all inputs to numeric values
+    # Konversi semua input ke nilai numerik
     Age = int(Age)
     Gender = int(Gender)
     Polyuria = int(Polyuria)
@@ -77,11 +77,12 @@ if st.button('Test Prediction Diabetes'):
     Irritability = int(Irritability)
     Delayedhealing = int(Delayedhealing)
     Partialparesis = int(Partialparesis)
-    Muscle_stiffness = int(Musclestiffness)
+    Musclestiffness = int(Musclestiffness)
     Alopecia = int(Alopecia)
     Obesity = int(Obesity)
 
-    diab_prediction = diabetes_model.predict([Age, Gender, Polyuria, Polydipsia, Suddenweightloss, Weakness, Polyphagia, Genitalthrush, Visualblurring, Itching, Irritability, Delayedhealing, Partialparesis, Musclestiffness, Alopecia, Obesity])
+    # Membuat prediksi dengan array 2D
+    diab_prediction = diabetes_model.predict([[Age, Gender, Polyuria, Polydipsia, Suddenweightloss, Weakness, Polyphagia, Genitalthrush, Visualblurring, Itching, Irritability, Delayedhealing, Partialparesis, Musclestiffness, Alopecia, Obesity]])
 
     if diab_prediction[0] == 1:
         diab_diagnosis = 'Pasien terkena Diabetes'
