@@ -81,7 +81,7 @@ if st.button('Test Prediction Diabetes'):
     Alopecia = int(Alopecia)
     Obesity = int(Obesity)
 
-    diab_prediction = diabetes_model.predict([['Age', 'Gender', 'Polyuria', 'Polydipsia', 'Suddenweightloss', 'Weakness', 'Polyphagia', 'Genitalthrush', 'Visualblurring', 'Itching', 'Irritability', 'Delayedhealing', 'Partialparesis', 'Musclestiffness', 'Alopecia', 'Obesity']])
+    diab_prediction = diabetes_model.predict(['Age', 'Gender', 'Polyuria', 'Polydipsia', 'Suddenweightloss', 'Weakness', 'Polyphagia', 'Genitalthrush', 'Visualblurring', 'Itching', 'Irritability', 'Delayedhealing', 'Partialparesis', 'Musclestiffness', 'Alopecia', 'Obesity'])
 
     if diab_prediction[0] == 1:
         diab_diagnosis = 'Pasien terkena Diabetes'
