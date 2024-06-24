@@ -35,7 +35,7 @@ with col2:
     Genitalthrush = st.number_input('Input Genital Thrush', min_value=0, max_value=1, step=1)
 
 with col1:
-    visualblurring = st.number_input('Input Visual Blurring', min_value=0, max_value=1, step=1)
+    Visualblurring = st.number_input('Input Visual Blurring', min_value=0, max_value=1, step=1)
 
 with col2:
     Itching = st.number_input('Input Itching', min_value=0, max_value=1, step=1)
@@ -81,7 +81,7 @@ if st.button('Test Prediction Diabetes'):
     Alopecia = int(Alopecia)
     Obesity = int(Obesity)
 
-    diab_prediction = diabetes_model.predict([[Age, Gender, Polyuria, Polydipsia, suddenweightloss, weakness, Polyphagia, Genitalthrush, visualblurring, Itching, Irritability, delayedhealing, partialparesis, musclestiffness, Alopecia, Obesity]])
+    diab_prediction = diabetes_model.predict([[Age, Gender, Polyuria, Polydipsia, Suddenweightloss, Weakness, Polyphagia, Genitalthrush, Visualblurring, Itching, Irritability, Delayedhealing, Partialparesis, Musclestiffness, Alopecia, Obesity]])
 
     if diab_prediction[0] == 1:
         diab_diagnosis = 'Pasien terkena Diabetes'
