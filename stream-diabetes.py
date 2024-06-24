@@ -50,7 +50,7 @@ with col1:
     partialparesis = st.number_input('Input Partial Paresis', min_value=0, max_value=1, step=1)
 
 with col2:
-    muscle_stiffness = st.number_input('Input Muscle Stiffness', min_value=0, max_value=1, step=1)
+    musclestiffness = st.number_input('Input Muscle Stiffness', min_value=0, max_value=1, step=1)
 
 with col1:
     Alopecia = st.number_input('Input Alopecia', min_value=0, max_value=1, step=1)
