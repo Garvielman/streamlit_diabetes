@@ -63,6 +63,24 @@ diab_diagnosis = ''
 
 # When the button is clicked, make the prediction and display the result
 if st.button('Test Prediction Diabetes'):
+    # Convert all inputs to numeric values
+    Age = int(Age)
+    Gender = int(Gender)
+    Polyuria = int(Polyuria)
+    Polydipsia = int(Polydipsia)
+    suddenweightloss = int(suddenweightloss)
+    weakness = int(weakness)
+    Polyphagia = int(Polyphagia)
+    Genitalthrush = int(Genitalthrush)
+    visualblurring = int(visualblurring)
+    Itching = int(Itching)
+    Irritability = int(Irritability)
+    delayedhealing = int(delayedhealing)
+    partialparesis = int(partialparesis)
+    muscle_stiffness = int(muscle_stiffness)
+    Alopecia = int(Alopecia)
+    Obesity = int(Obesity)
+
     diab_prediction = diabetes_model.predict([[Age, Gender, Polyuria, Polydipsia, suddenweightloss, weakness, Polyphagia, Genitalthrush, visualblurring, Itching, Irritability, delayedhealing, partialparesis, muscle_stiffness, Alopecia, Obesity]])
 
     if diab_prediction[0] == 1:
