@@ -23,10 +23,10 @@ with col2:
     Polydipsia = st.number_input('Input Polydipsia', min_value=0, max_value=1, step=1)
 
 with col1:
-    suddenweightloss = st.number_input('Input Sudden Weight Loss', min_value=0, max_value=1, step=1)
+    Suddenweightloss = st.number_input('Input Sudden Weight Loss', min_value=0, max_value=1, step=1)
 
 with col2:
-    weakness = st.number_input('Input Weakness', min_value=0, max_value=1, step=1)
+    Weakness = st.number_input('Input Weakness', min_value=0, max_value=1, step=1)
 
 with col1:
     Polyphagia = st.number_input('Input Polyphagia', min_value=0, max_value=1, step=1)
@@ -44,13 +44,13 @@ with col1:
     Irritability = st.number_input('Input Irritability', min_value=0, max_value=1, step=1)
 
 with col2:
-    delayedhealing = st.number_input('Input Delayed Healing', min_value=0, max_value=1, step=1)
+    Delayedhealing = st.number_input('Input Delayed Healing', min_value=0, max_value=1, step=1)
 
 with col1:
-    partialparesis = st.number_input('Input Partial Paresis', min_value=0, max_value=1, step=1)
+    Partialparesis = st.number_input('Input Partial Paresis', min_value=0, max_value=1, step=1)
 
 with col2:
-    musclestiffness = st.number_input('Input Muscle Stiffness', min_value=0, max_value=1, step=1)
+    Musclestiffness = st.number_input('Input Muscle Stiffness', min_value=0, max_value=1, step=1)
 
 with col1:
     Alopecia = st.number_input('Input Alopecia', min_value=0, max_value=1, step=1)
